@@ -1,0 +1,73 @@
+package com.example.agendiario;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "empathies")
+
+public class Empathy {
+
+private int mId; 
+private String mCreationDate;
+private String mAttitude; 
+private String mType;
+private int mEvaluation;
+
+@PrimaryKey(autoGenerate = true) @NonNull 
+@ColumnInfo(name = "empathy") 
+private int mId;
+
+@Nullable
+ @ColumnInfo(name = "empathy Attitude") 
+private String mAttitude; 
+
+private String mType;
+
+public Empathy(@Nullable String type, String attitude , int evaluation, String creationDate) { 
+mType = type  ;
+mAttitude = attitude ; 
+mEvaluation = evaluation ; 
+mCreationDate = creationDate;
+ }
+public int getId() {
+         return mId; 
+} 
+public void setId(int id) { 
+        mId = id;
+ }
+
+public String getAttitude () { 
+return mAttitude;
+ }
+ public void setAttitude(String attitude) { 
+mAttitude = attitude;
+ }
+
+public String getType() { 
+return mtype; 
+} 
+public void setType(String type ) { 
+mType = type ;
+ }
+
+public int getEvaluation () { 
+return mEvaluation;
+ }
+ public void setEvaluation(int evaluation){
+ mEvaluation = evaluation; 
+}
+
+public String getCreationDate() { 
+return mCreationDate; 
+}
+ public void setCreationDate(String creationDate) { 
+mCreationDate = creationDate;
+ } 
+private int mEvaluation;
+ private String mCreationDate; 
+}
+
+
