@@ -1,24 +1,14 @@
-package com.example.agendiario;
+ public class Empathy {
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+ private int mId; 
+ private String mCreationDate;
+ private String mAttitude; 
+ private String mType;
+ private int mEvaluation;
 
-@Entity(tableName = "empathies")
-
-public class Empathy {
-
-private int mId; 
-private String mCreationDate;
-private String mAttitude; 
-private String mType;
-private int mEvaluation;
-
-@PrimaryKey(autoGenerate = true) @NonNull 
-@ColumnInfo(name = "empathy") 
-private int mId;
+ @PrimaryKey(autoGenerate = true) @NonNull 
+ @ColumnInfo(name = "empathy") 
+ private int mId;
 
 @Nullable
  @ColumnInfo(name = "empathy Attitude") 
@@ -26,11 +16,11 @@ private String mAttitude;
 
 private String mType;
 
-public Empathy(@Nullable String type, String attitude , int evaluation, String creationDate) { 
-mType = type  ;
-mAttitude = attitude ; 
-mEvaluation = evaluation ; 
-mCreationDate = creationDate;
+  public Empathy(@Nullable String type, String attitude , int evaluation, String creationDate) { 
+  mType = type  ;
+ mAttitude = attitude ; 
+ mEvaluation = evaluation ; 
+ mCreationDate = creationDate;
  }
 public int getId() {
          return mId; 
